@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>주식회사 송원건설 | 지반기초 전문 시공</title>
-  <meta name="description" content="주식회사 송원건설은 연약지반 개량, 파일공사, 흙막이 가시설, DCM 공사 등 지반기초 분야의 전문 시공을 수행합니다." />
-  <meta name="keywords" content="송원건설, 주식회사 송원건설, 지반기초, 파일공사, 연약지반, 흙막이, 가시설, DCM, 토목공사" />
+  <meta name="description" content="주식회사 송원건설은 연약지반 개량, DCM 공사, 파일공사, 흙막이 가시설공사 등 지반기초 분야의 전문 시공을 수행합니다." />
+  <meta name="keywords" content="송원건설, 주식회사 송원건설, 김해 건설회사, 지반기초, 파일공사, 연약지반, DCM, 흙막이, 가시설, 토목공사" />
+
+  <meta property="og:title" content="주식회사 송원건설 | 지반기초 전문 시공" />
+  <meta property="og:description" content="연약지반 개량, DCM 공사, 파일공사, 흙막이 가시설공사 전문 시공" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.songwongeo.co.kr" />
+
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     * {
@@ -15,11 +25,19 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
       color: #1f2937;
       background: #f8fafc;
       line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
     }
 
     header {
@@ -30,11 +48,16 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
     }
 
     header h1 {
       font-size: 24px;
       font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
     nav a {
@@ -43,38 +66,81 @@
       margin-left: 20px;
       font-size: 15px;
       opacity: 0.9;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: #fb923c;
     }
 
     .hero {
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+      background: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.78)),
         url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 120px 8%;
+      padding: 130px 8%;
       text-align: left;
     }
 
+    .hero-badge {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.95);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
     .hero h2 {
-      font-size: 46px;
+      font-size: 48px;
       line-height: 1.25;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      letter-spacing: -1px;
     }
 
     .hero p {
       font-size: 20px;
-      max-width: 760px;
-      margin-bottom: 30px;
+      max-width: 820px;
+      margin-bottom: 34px;
+      color: #e5e7eb;
     }
 
-    .hero .btn {
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       display: inline-block;
       background: #f97316;
       color: white;
-      padding: 14px 26px;
-      border-radius: 8px;
+      padding: 15px 26px;
+      border-radius: 10px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 800;
+      border: 2px solid #f97316;
+    }
+
+    .btn:hover {
+      background: #ea580c;
+      border-color: #ea580c;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #0f172a;
+      border-color: white;
     }
 
     section {
@@ -82,41 +148,59 @@
     }
 
     .section-title {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 16px;
       color: #0f172a;
+      letter-spacing: -0.7px;
     }
 
     .section-desc {
-      max-width: 850px;
+      max-width: 920px;
       color: #4b5563;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
       font-size: 17px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
     }
 
     .card {
       background: white;
-      padding: 28px;
-      border-radius: 16px;
+      padding: 30px;
+      border-radius: 18px;
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
       border: 1px solid #e5e7eb;
     }
 
     .card h3 {
-      font-size: 21px;
+      font-size: 22px;
       margin-bottom: 12px;
       color: #111827;
+      letter-spacing: -0.3px;
     }
 
     .card p {
       color: #4b5563;
       font-size: 15.5px;
+    }
+
+    .method-list {
+      margin-top: 16px;
+      padding-left: 18px;
+    }
+
+    .method-list li {
+      margin-bottom: 10px;
+      color: #4b5563;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    .method-list strong {
+      color: #111827;
     }
 
     .dark {
@@ -135,6 +219,7 @@
     .dark .card {
       background: #1f2937;
       border-color: #374151;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
     }
 
     .dark .card h3 {
@@ -145,23 +230,173 @@
       color: #d1d5db;
     }
 
-    .contact-box {
+    .dark .method-list li {
+      color: #d1d5db;
+    }
+
+    .dark .method-list strong {
+      color: #ffffff;
+    }
+
+    .process {
+      counter-reset: step;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .process-item {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .process-item::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      background: #f97316;
+      color: white;
+      border-radius: 50%;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .process-item h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .process-item p {
+      color: #4b5563;
+      font-size: 15px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-box,
+    .form-box {
       background: white;
       border-radius: 18px;
-      padding: 36px;
+      padding: 34px;
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-      max-width: 900px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .contact-box h3,
+    .form-box h3 {
+      font-size: 24px;
+      color: #0f172a;
+      margin-bottom: 20px;
     }
 
     .contact-box p {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 16.5px;
+      color: #374151;
+    }
+
+    .contact-box a {
+      color: #f97316;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .call-btn {
+      background: #f97316;
+    }
+
+    .mail-btn {
+      background: #111827;
+    }
+
+    .inquiry-form {
+      display: grid;
+      gap: 17px;
+    }
+
+    .inquiry-form label {
+      display: grid;
+      gap: 8px;
+      font-weight: 800;
+      color: #111827;
+      font-size: 15px;
+    }
+
+    .inquiry-form input,
+    .inquiry-form select,
+    .inquiry-form textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      background: white;
+    }
+
+    .inquiry-form input:focus,
+    .inquiry-form select:focus,
+    .inquiry-form textarea:focus {
+      outline: none;
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+    }
+
+    .inquiry-form button {
+      background: #f97316;
+      color: white;
+      border: none;
+      padding: 16px 24px;
+      border-radius: 10px;
       font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .inquiry-form button:hover {
+      background: #ea580c;
+    }
+
+    .notice {
+      margin-top: 14px;
+      color: #6b7280;
+      font-size: 14px;
     }
 
     footer {
       background: #0f172a;
       color: #cbd5e1;
-      padding: 30px 8%;
+      padding: 34px 8%;
       font-size: 14px;
     }
 
@@ -169,9 +404,29 @@
       color: white;
     }
 
+    .footer-grid {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mobile-contact-bar {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       header {
         display: block;
+        padding: 18px 6%;
+      }
+
+      header h1 {
+        font-size: 21px;
       }
 
       nav {
@@ -181,10 +436,11 @@
       nav a {
         display: inline-block;
         margin: 6px 10px 0 0;
+        font-size: 14px;
       }
 
       .hero {
-        padding: 90px 6%;
+        padding: 88px 6%;
       }
 
       .hero h2 {
@@ -198,6 +454,47 @@
       section {
         padding: 60px 6%;
       }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .card,
+      .contact-box,
+      .form-box {
+        padding: 24px;
+      }
+
+      .mobile-contact-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        z-index: 9999;
+        box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.18);
+      }
+
+      .mobile-contact-bar a {
+        flex: 1;
+        text-align: center;
+        padding: 16px 8px;
+        color: white;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .mobile-contact-bar .phone {
+        background: #f97316;
+      }
+
+      .mobile-contact-bar .email {
+        background: #111827;
+      }
+
+      body {
+        padding-bottom: 62px;
+      }
     }
   </style>
 </head>
@@ -207,7 +504,8 @@
     <h1>주식회사 송원건설</h1>
     <nav>
       <a href="#about">회사소개</a>
-      <a href="#business">사업분야</a>
+      <a href="#business">주요사업</a>
+      <a href="#process">시공절차</a>
       <a href="#works">시공역량</a>
       <a href="#contact">공사문의</a>
     </nav>
@@ -215,12 +513,17 @@
 
   <main>
     <section class="hero">
-      <h2>지반기초 전문 시공 파트너<br />주식회사 송원건설</h2>
+      <span class="hero-badge">지반기초 전문 시공 파트너</span>
+      <h2>현장 조건에 맞춘<br />안정적인 지반기초 시공</h2>
       <p>
-        연약지반 개량, 파일공사, 흙막이 가시설, DCM 공사 등
-        현장 조건에 맞춘 안정적인 지반기초 시공을 수행합니다.
+        주식회사 송원건설은 연약지반 개량, DCM 공사, 파일공사, 흙막이 가시설공사 등
+        토목·지반기초 분야의 전문 시공을 수행합니다.
       </p>
-      <a class="btn" href="#contact">공사 문의하기</a>
+
+      <div class="hero-buttons">
+        <a class="btn" href="#contact">공사 문의하기</a>
+        <a class="btn btn-outline" href="tel:0553394763">055-339-4763</a>
+      </div>
     </section>
 
     <section id="about">
@@ -233,15 +536,26 @@
       <div class="cards">
         <div class="card">
           <h3>현장 중심 시공</h3>
-          <p>도면과 현장 조건을 함께 검토하여 실제 시공 가능성과 안정성을 우선합니다.</p>
+          <p>
+            도면만 보는 것이 아니라 현장 진입 조건, 주변 구조물, 지하수, 장비 작업 반경까지 함께 검토하여
+            실제 시공 가능성과 안정성을 우선합니다.
+          </p>
         </div>
+
         <div class="card">
           <h3>지반기초 전문성</h3>
-          <p>연약지반, 파일, 가시설 등 기초공사 분야의 시공 대응력을 갖추고 있습니다.</p>
+          <p>
+            연약지반, DCM, 파일, 흙막이 가시설 등 기초공사 분야의 공정 특성을 이해하고
+            현장 조건에 맞는 시공 대응력을 갖추고 있습니다.
+          </p>
         </div>
+
         <div class="card">
-          <h3>안전과 품질</h3>
-          <p>공정별 안전관리와 품질관리를 바탕으로 신뢰할 수 있는 시공을 지향합니다.</p>
+          <h3>안전과 품질관리</h3>
+          <p>
+            공정별 안전관리와 품질관리를 바탕으로 구조물의 기초 안정성을 확보하고,
+            신뢰할 수 있는 시공을 지향합니다.
+          </p>
         </div>
       </div>
     </section>
@@ -249,25 +563,110 @@
     <section id="business" class="dark">
       <h2 class="section-title">주요 사업분야</h2>
       <p class="section-desc">
-        송원건설은 다양한 토목 현장의 지반기초 공종에 대응합니다.
+        송원건설은 지반 조건, 설계도면, 현장 여건을 종합적으로 검토하여
+        기초공사, 지반개량, 흙막이 가시설 등 현장에 적합한 시공 방법을 제안하고 수행합니다.
       </p>
 
       <div class="cards">
         <div class="card">
           <h3>연약지반 개량공사</h3>
-          <p>지반 조건을 검토하여 침하와 안정성을 고려한 개량 공사를 수행합니다.</p>
+          <p>
+            침하 우려가 있거나 지지력이 부족한 지반을 대상으로 구조물 안정성을 확보하기 위한 지반개량 공사입니다.
+          </p>
+          <ul class="method-list">
+            <li><strong>적용 현장:</strong> 도로, 부지조성, 공장부지, 항만·매립지, 구조물 기초부</li>
+            <li><strong>시공 방법:</strong> 지반조사 검토 → 개량 범위 산정 → 장비 투입 → 지반 보강 및 안정화 시공</li>
+            <li><strong>검토 사항:</strong> 침하량, 지지력, 지하수, 주변 구조물, 장비 진입 여건</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>파일공사</h3>
-          <p>구조물 기초 안정성을 확보하기 위한 파일 시공 및 관련 공정을 수행합니다.</p>
-        </div>
-        <div class="card">
-          <h3>흙막이 가시설공사</h3>
-          <p>굴착 및 구조물 시공을 위한 흙막이, 가시설 공사를 현장 여건에 맞게 진행합니다.</p>
-        </div>
+
         <div class="card">
           <h3>DCM 공사</h3>
-          <p>심층혼합처리 등 지반 안정화를 위한 특수 지반개량 공사에 대응합니다.</p>
+          <p>
+            심층혼합처리공법을 활용하여 연약지반과 고화재를 혼합하고, 지중에 개량체를 형성하는 지반 안정화 공사입니다.
+          </p>
+          <ul class="method-list">
+            <li><strong>적용 현장:</strong> 연약지반, 매립지, 항만 배후부지, 대형 구조물 기초부</li>
+            <li><strong>시공 방법:</strong> 위치 측량 → 천공 및 교반 → 고화재 주입 → 지중 혼합 → 개량체 형성</li>
+            <li><strong>검토 사항:</strong> 개량 심도, 개량 직경, 배합비, 지반 강도, 품질시험 기준</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>파일공사</h3>
+          <p>
+            구조물 하중을 안정적인 지지층까지 전달하기 위해 현장 조건에 맞는 파일 시공을 수행합니다.
+          </p>
+          <ul class="method-list">
+            <li><strong>적용 현장:</strong> 건축물, 토목 구조물, 교량, 옹벽, 공장 및 창고 기초</li>
+            <li><strong>시공 방법:</strong> 파일 위치 측량 → 장비 세팅 → 천공 또는 항타 → 파일 근입 → 두부 정리</li>
+            <li><strong>검토 사항:</strong> 지지층 깊이, 파일 규격, 소음·진동, 인접 구조물, 장비 작업 반경</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>흙막이 가시설공사</h3>
+          <p>
+            굴착공사 중 토사 붕괴를 방지하고 인접 구조물을 보호하기 위한 흙막이 및 가시설 공사입니다.
+          </p>
+          <ul class="method-list">
+            <li><strong>적용 현장:</strong> 지하층 굴착, 옹벽, 배수시설, 구조물 기초 굴착부</li>
+            <li><strong>시공 방법:</strong> H-PILE 또는 Sheet Pile 설치 → 토류판 시공 → 단계별 굴착 → 버팀보·앵커 설치</li>
+            <li><strong>검토 사항:</strong> 굴착 깊이, 지하수, 주변 건물, 도로 인접 여부, 변위 관리</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>토공 및 기초부대공</h3>
+          <p>
+            지반기초 공사와 연계되는 터파기, 되메우기, 정지작업, 기초부 정리 등 현장 여건에 맞는 부대공사를 수행합니다.
+          </p>
+          <ul class="method-list">
+            <li><strong>적용 현장:</strong> 부지조성, 구조물 기초, 가시설 주변, 지반개량 후 정리 구간</li>
+            <li><strong>시공 방법:</strong> 현장 정리 → 굴착 및 반출 → 지반 정지 → 되메우기 및 다짐</li>
+            <li><strong>검토 사항:</strong> 토질, 반출입 동선, 장비 진입, 우수 처리, 주변 민원 가능성</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>현장검토 및 시공계획</h3>
+          <p>
+            공사 착수 전 설계도면과 지반조사서를 검토하여 현장에 적합한 시공 방법, 장비 투입, 공정 계획을 검토합니다.
+          </p>
+          <ul class="method-list">
+            <li><strong>검토 자료:</strong> 설계도면, 지반조사서, 현장 위치, 공사 일정, 공종 범위</li>
+            <li><strong>검토 내용:</strong> 시공 가능성, 장비 투입 가능 여부, 위험 요인, 예상 공정</li>
+            <li><strong>상담 방식:</strong> 도면 검토 후 현장 조건에 맞는 시공 방향을 안내합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2 class="section-title">시공 검토 절차</h2>
+      <p class="section-desc">
+        문의 접수 후 현장 여건과 설계자료를 검토하여 공종별 시공 가능 여부와 공사 방향을 안내드립니다.
+      </p>
+
+      <div class="process">
+        <div class="process-item">
+          <h3>문의 접수</h3>
+          <p>공사 위치, 공종, 일정, 도면 보유 여부를 확인합니다.</p>
+        </div>
+
+        <div class="process-item">
+          <h3>자료 검토</h3>
+          <p>설계도면, 지반조사서, 현장 조건, 주변 구조물을 검토합니다.</p>
+        </div>
+
+        <div class="process-item">
+          <h3>시공 방법 검토</h3>
+          <p>장비 투입, 공정 순서, 안전관리, 품질관리 방향을 검토합니다.</p>
+        </div>
+
+        <div class="process-item">
+          <h3>공사 협의</h3>
+          <p>현장 조건에 맞춘 시공 방향과 세부 내용을 협의합니다.</p>
         </div>
       </div>
     </section>
@@ -276,21 +675,29 @@
       <h2 class="section-title">시공역량</h2>
       <p class="section-desc">
         송원건설은 현장 조건과 설계 기준에 맞춘 지반기초 공사를 수행하며,
-        연약지반 개량, 파일공사, 흙막이 가시설, DCM 공사 등 다양한 현장에 대응합니다.
+        연약지반 개량, DCM 공사, 파일공사, 흙막이 가시설공사 등 다양한 현장에 대응합니다.
       </p>
 
       <div class="cards">
         <div class="card">
           <h3>설계도면 검토</h3>
-          <p>공사 도면, 지반조사서, 현장 위치를 바탕으로 시공 가능 여부를 검토합니다.</p>
+          <p>
+            공사 도면, 지반조사서, 현장 위치를 바탕으로 시공 가능 여부와 공정상 위험 요소를 사전에 검토합니다.
+          </p>
         </div>
+
         <div class="card">
           <h3>공정 계획</h3>
-          <p>현장 일정과 장비 투입 여건을 고려하여 효율적인 시공 계획을 수립합니다.</p>
+          <p>
+            현장 일정, 장비 투입 여건, 작업 동선, 주변 민원 가능성을 고려하여 효율적인 시공 계획을 수립합니다.
+          </p>
         </div>
+
         <div class="card">
           <h3>현장 대응</h3>
-          <p>지반 상태와 현장 변수에 따라 안전하고 현실적인 대응 방안을 검토합니다.</p>
+          <p>
+            지반 상태와 현장 변수에 따라 안전하고 현실적인 대응 방안을 검토하여 안정적인 시공을 지향합니다.
+          </p>
         </div>
       </div>
     </section>
@@ -298,23 +705,122 @@
     <section id="contact">
       <h2 class="section-title">공사문의</h2>
       <p class="section-desc">
-        공사 검토가 필요하신 경우 아래 내용을 함께 준비해 주시면 더 정확한 상담이 가능합니다.
+        지반기초, 연약지반 개량, DCM 공사, 파일공사, 흙막이 가시설공사 관련 문의를 남겨주세요.
+        확인 후 연락드리겠습니다.
       </p>
 
-      <div class="contact-box">
-        <p><strong>회사명:</strong> 주식회사 송원건설</p>
-        <p><strong>홈페이지:</strong> https://www.songwongeo.co.kr</p>
-        <p><strong>상담 가능 공종:</strong> 연약지반 개량공사 / 파일공사 / 흙막이 가시설공사 / DCM 공사</p>
-        <p><strong>문의 시 필요자료:</strong> 공사 위치, 설계도면, 지반조사서, 공종, 대략적인 공사 일정</p>
-        <p><strong>안내:</strong> 주요 시공실적, 현장사진, 보유장비 정보는 공사 문의 시 별도 안내드립니다.</p>
+      <div class="contact-wrap">
+        <div class="contact-box">
+          <h3>송원건설 연락처</h3>
+          <p><strong>회사명:</strong> 주식회사 송원건설</p>
+          <p><strong>주소:</strong> 경상남도 김해시 삼문로19, 1205호</p>
+          <p><strong>대표전화:</strong> <a href="tel:0553394763">055-339-4763</a></p>
+          <p><strong>FAX:</strong> 055-339-4764</p>
+          <p><strong>이메일:</strong> <a href="mailto:songwon4763@naver.com">songwon4763@naver.com</a></p>
+          <p><strong>홈페이지:</strong> https://www.songwongeo.co.kr</p>
+          <p><strong>상담 가능 공종:</strong> 연약지반 개량공사 / DCM 공사 / 파일공사 / 흙막이 가시설공사 / 토공 및 기초부대공</p>
+
+          <div class="contact-buttons">
+            <a class="call-btn" href="tel:0553394763">전화문의</a>
+            <a class="mail-btn" href="mailto:songwon4763@naver.com">이메일문의</a>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h3>홈페이지 문의란</h3>
+
+          <form class="inquiry-form" onsubmit="sendInquiry(event)">
+            <label>
+              이름 / 회사명
+              <input type="text" id="name" placeholder="예: 홍길동 / ○○건설" required>
+            </label>
+
+            <label>
+              연락처
+              <input type="text" id="phone" placeholder="예: 010-0000-0000 또는 사무실 번호" required>
+            </label>
+
+            <label>
+              공사 위치
+              <input type="text" id="location" placeholder="예: 경남 김해시 / 부산 강서구">
+            </label>
+
+            <label>
+              문의 공종
+              <select id="workType">
+                <option value="연약지반 개량공사">연약지반 개량공사</option>
+                <option value="DCM 공사">DCM 공사</option>
+                <option value="파일공사">파일공사</option>
+                <option value="흙막이 가시설공사">흙막이 가시설공사</option>
+                <option value="토공 및 기초부대공">토공 및 기초부대공</option>
+                <option value="현장검토 및 시공계획">현장검토 및 시공계획</option>
+                <option value="기타 공사문의">기타 공사문의</option>
+              </select>
+            </label>
+
+            <label>
+              문의 내용
+              <textarea id="message" rows="6" placeholder="공사 내용, 일정, 도면 보유 여부, 지반조사서 보유 여부 등을 적어주세요." required></textarea>
+            </label>
+
+            <button type="submit">문의 보내기</button>
+          </form>
+
+          <p class="notice">
+            문의 보내기 버튼을 누르면 입력하신 내용이 이메일 작성창으로 연결됩니다.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p><strong>주식회사 송원건설</strong></p>
-    <p>지반기초 · 연약지반 · 파일공사 · 흙막이 가시설 · DCM 전문 시공</p>
-    <p>© 주식회사 송원건설. All rights reserved.</p>
+    <div class="footer-grid">
+      <p><strong>주식회사 송원건설</strong></p>
+      <p>주소: 경상남도 김해시 삼문로19, 1205호</p>
+      <p>대표전화: 055-339-4763 ｜ FAX: 055-339-4764 ｜ 이메일: songwon4763@naver.com</p>
+      <p>지반기초 · 연약지반 개량 · DCM 공사 · 파일공사 · 흙막이 가시설공사</p>
+      <p>© 주식회사 송원건설. All rights reserved.</p>
+    </div>
   </footer>
+
+  <div class="mobile-contact-bar">
+    <a class="phone" href="tel:0553394763">전화문의</a>
+    <a class="email" href="mailto:songwon4763@naver.com">이메일문의</a>
+  </div>
+
+  <script>
+    function sendInquiry(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const location = document.getElementById("location").value;
+      const workType = document.getElementById("workType").value;
+      const message = document.getElementById("message").value;
+
+      const to = "songwon4763@naver.com";
+      const subject = "[송원건설 홈페이지 문의] " + name;
+
+      const body = [
+        "송원건설 홈페이지 문의가 접수되었습니다.",
+        "",
+        "이름 / 회사명: " + name,
+        "연락처: " + phone,
+        "공사 위치: " + location,
+        "문의 공종: " + workType,
+        "",
+        "문의 내용:",
+        message,
+        "",
+        "홈페이지: https://www.songwongeo.co.kr"
+      ].join("\n");
+
+      window.location.href =
+        "mailto:" + to +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    }
+  </script>
 </body>
 </html>
